@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [email, setEmail] = useState("");
+
+    const handleRegister = () => {
+        console.log(`Email registered: ${email}`);
+        setEmail("");
+    };
+    return (
+        <div className="App">
+            <h2>HOME</h2>
+            <p>Cadastro de email</p>
+            <input
+                type="text"
+                placeholder="Digite seu e-mail..."
+                value={email}
+                onChange={blablabla => setEmail(blablabla.target.value)}
+            />
+            <button onClick={handleRegister}>Cadastrar</button>
+        </div>
+    );
 }
 
 export default App;
