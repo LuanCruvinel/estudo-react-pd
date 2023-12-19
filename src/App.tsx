@@ -16,7 +16,7 @@ function App() {
                 type="text"
                 placeholder="Digite seu e-mail..."
                 value={email}
-                onChange={blablabla => setEmail(blablabla.target.value)}
+                onChange={event => setEmail(event.target.value)}
             />
             <button onClick={handleRegister}>Cadastrar</button>
         </div>
