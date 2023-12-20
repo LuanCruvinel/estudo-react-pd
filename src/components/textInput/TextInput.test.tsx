@@ -8,7 +8,7 @@ let defaultProps: any;
 beforeEach(() => {
 
     defaultProps = {
-        value: 'Heloow',
+        value: 'Heloo',
         onChange: jest.fn(),
         placeholder: 'Enter text...',
     };
@@ -21,8 +21,8 @@ test('renders TextInput component', () => {
 test('checks if value is filled', () => {
     const inputElement = screen.getByPlaceholderText(/Enter text.../) as HTMLInputElement;
 
-    fireEvent.change(inputElement, {target: {value: 'Heloow'}});
-    expect(inputElement.value).toBe('Heloow');
+    fireEvent.change(inputElement, {target: {value: 'Heloo'}});
+    expect(inputElement.value).toBe('Heloo');
 });
 
 test('onChange event', () => {
